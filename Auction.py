@@ -21,16 +21,16 @@ while others=="yes":
         bid=input("ENTER YOUR BID :  \n")
         name_list[name]=bid
         clear()
-    others=input("if there are more people to bid enter  'YES'or 'NO' : \n").lower()   
-highest_bid=0  
-for key in name_list:
-    bid_amount=int(name_list[key] ) 
-    if bid_amount>highest_bid:
-        highest_bid=bid_amount
-        winner_name=key  
+    others=input("if there are more people to bid enter  'YES'or 'NO' : \n").lower()
+#function to find highest bid
+def highest_bid():      
+    highest_bid=0  
+    for key in name_list:
+        bid_amount=int(name_list[key] ) 
+        if bid_amount>highest_bid:
+          highest_bid=bid_amount
+    winner_name=key  
+    print(f"{winner_name} is Winner with bid {highest_bid}/- ")
 
- 
-print(f"{winner_name} is Winner with bid {highest_bid}/- ")
-
-   
+highest_bid()  
     
